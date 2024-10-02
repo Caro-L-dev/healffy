@@ -1,5 +1,11 @@
 import type { Metadata } from "next";
+
 import "./globals.css";
+
+import { Toaster } from "sonner";
+
+import { Header } from "@/components/header/Header";
+import { Footer } from "@/components/footer/Footer";
 
 export const metadata: Metadata = {
   title: "Healthy Fast Food",
@@ -12,8 +18,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body suppressHydrationWarning={true}>{children}</body>
+    <html lang="en" className="h-full">
+      <body
+        suppressHydrationWarning={true}
+        className="h-full bg-white dark:bg-black"
+      >
+        <Toaster />
+        <div className="relative m-auto flex max-h-full min-h-full max-w-md flex-col gap-2 border-x py-4">
+          <Header />
+          <div className="flex-1 overflow-hidden pt-2">{children}</div>
+          <Footer />
+        </div>
+      </body>
     </html>
   );
 }
