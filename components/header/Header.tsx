@@ -3,17 +3,18 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { Button } from "../ui/button";
+import { ShoppingBasket } from "lucide-react";
 
 import { Wrapper } from "../wrapper/Wrapper";
+import { UserNameHeader } from "./UserNameHeader";
 
-import { ShoppingBasket } from "lucide-react";
+import { Button } from "../ui/button";
 
 export const Header = () => {
   return (
     <header className="border-b shadow-sm">
-      <Wrapper className="flex items-center justify-between gap-2">
-        <Link href="/" className="inline-flex items-center gap-2">
+      <Wrapper className="flex items-center">
+        <Link href="/" className="inline-flex flex-1 items-center gap-2">
           <Image
             src="/healthdonals.png"
             alt="Healffy logo"
@@ -22,10 +23,14 @@ export const Header = () => {
           />
           <h1 className="text-sm font-bold tracking-wide">Healffy</h1>
         </Link>
+        <div className="flex-1">
+          <UserNameHeader />
+        </div>
+
         <Button
           size="sm"
           variant="outline"
-          className="inline-flex gap-2 items-center"
+          className="inline-flex gap-2 items-center flex-none"
         >
           0
           <ShoppingBasket size={12} />
