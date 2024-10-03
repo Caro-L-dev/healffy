@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { Wrapper } from "../wrapper/Wrapper";
+import { Wrapper } from "../common/wrapper/Wrapper";
 
 export const Footer = () => {
   return (

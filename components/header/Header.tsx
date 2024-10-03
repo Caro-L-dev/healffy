@@ -5,7 +5,7 @@ import Link from "next/link";
 
 import { ShoppingBasket } from "lucide-react";
 
-import { Wrapper } from "../wrapper/Wrapper";
+import { Wrapper } from "../common/wrapper/Wrapper";
 import { UserNameHeader } from "./UserNameHeader";
 
 import { Button } from "../ui/button";

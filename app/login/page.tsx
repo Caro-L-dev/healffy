@@ -5,8 +5,9 @@ import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
-import { Wrapper } from "@/components/wrapper/Wrapper";
+import { Wrapper } from "@/components/common/wrapper/Wrapper";
 import { DecorativeImage } from "@/components/decorativeImg.tsx/DecorativeImg";
+import { StrongText } from "@/components/common/title/StrongText";
 
 import { useUserStore } from "@/lib/store/use-user-store";
 
@@ -55,7 +56,7 @@ export default function LoginPage() {
         />
       </div>
       <div className="text-center">
-        <h1 className="text-2xl font-bold">Bienvenue chez Healffy !</h1>
+        <StrongText>Bienvenue chez Healffy !</StrongText>
         <p>Inscris-toi pour accéder à ton compte.</p>
       </div>
       <form
